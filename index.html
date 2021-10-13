@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/c1dcae52de.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="src/styles.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>Weather App</title>
+  </head>
+  <body>
+    <!--Current day and time-->
+    <span class="currentDay"></span>
+    <!--Get your current location button-->
+    <div class="container2">
+      <button class="material-bubble getCurrentLocation">Your Location</button>
+    </div>
+
+    <!--Temperature for the current city the user is in-->
+    <div class="container">
+      <div class="row" id="current">
+        <!--The current city name-->
+        
+        <h1 class="currentCity neonText" id="city"></h1>
+        
+        <!--Weather icon-->
+        <div class ="col-12">
+        <img src="http://openweathermap.org/img/wn/10d@2x.png" id="currentTemp-icon"> </img>
+        </div>
+        
+        <!--temperature-->
+        <div class="row">
+          <div class="col-6 current-temp neonText" id="todaysTemp"> </div>
+          <div class="col-6" id="celcius"> <a href="#" class="active" id="celcius-link"> °C</a> | 
+            <a href="#" class="active" id="fahrenheit-link"> °F</a></div>
+          
+        </div>
+        <div class="row windspeed">
+          <div class="col-6" id="wind1">Wind(m/sec):</div>
+          <div class="col-6" id="wind2"></div>
+          
+        </div>
+        <div class="row description">
+          <div class="col-6" id="description1">Description:</div>
+          <div class="col-6" id="description2"></div>
+        </div>
+      </div>
+      
+
+      <!--Grid for the current city's temperature for the next 5 days-->
+      <div class="row" id="following-days">
+        <div class="col-2" id="fol-day">
+          <p class="following-days" id="day2"></p>
+          <!--Weather icon-->
+          <div class="col-12">
+            <img src="http://openweathermap.org/img/wn/10d@2x.png" class="futureTemp-icon" id="icon2"> </img>
+          </div>
+          <!--temperature-->
+          <div class="row">
+            <div class="col-6 following-temp neonText" id="day2-temp"></div>
+            <div class="col-6 following-temp-cel neonText" id="day2-celcius">°C</div>
+          </div>
+        </div>
+
+        <div class="col-2" id="fol-day">
+          <p class="following-days" id="day3"></p>
+          <div class="col-12">
+            <img src="http://openweathermap.org/img/wn/10d@2x.png" class="futureTemp-icon" id="icon3"> </img>
+          </div>
+          <div class="row">
+            <div class="col-6 following-temp neonText" id="day3-temp"></div>
+            <div class="col-6 following-temp-cel neonText" id="day3-degree">°C</div>
+          </div>
+        </div>
+
+        <div class="col-2" id="fol-day">
+          <p class="following-days" id="day4"></p>
+          <div class="col-12">
+            <img src="http://openweathermap.org/img/wn/10d@2x.png" class="futureTemp-icon" id="icon4"> </img>
+          </div>
+          <div class="row">
+            <div class="col-6 following-temp neonText" id="day4-temp"></div>
+            <div class="col-6 following-temp-cel neonText" id="day4-degree">°C</div>
+          </div>
+        </div>
+
+        <div class="col-2" id="fol-day">
+          <p class="following-days" id="day5"></p>
+          <div class="col-12">
+            <img src="http://openweathermap.org/img/wn/10d@2x.png" class="futureTemp-icon" id="icon5"> </img>
+          </div>
+          <div class="row">
+            <div class="col-6 following-temp neonText" id="day5-temp"></div>
+            <div class="col-6 following-temp-cel neonText" id="day5-degree">°C</div>
+          </div>
+        </div>
+
+        <div class="col-2" id="fol-day">
+          <p class="following-days" id="day6"></p>
+          <div class="col-12">
+            <img src="http://openweathermap.org/img/wn/10d@2x.png" class="futureTemp-icon" id="icon6"> </img>
+          </div>
+          <div class="row">
+            <div class="col-6 following-temp neonText" id="day6-temp"></div>
+            <div class="col-6 following-temp-cel neonText" id="day6-degree">°C</div>
+          </div>
+        </div>
+
+        
+      </div>
+    </div>
+
+    <!--Search bar-->
+    <div class="container1">
+      <form class="citySearch">
+        <input type="text" class="input-city" placeholder="Enter a city" />
+        <button class="material-bubble submitButton">Submit</button>
+      </form>
+    </div>
+
+    <a href="https://github.com/hlduthie/Wk7Homework">Open Source Code by Hana Duthie</a>
+
+    <script src="src/index.js"></script>
+  </body>
+</html>

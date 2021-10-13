@@ -1,0 +1,250 @@
+body {
+  background-color: #32323c;
+  border: solid black;
+  border-width: 10px;
+  margin-top: 10%;
+  margin-left: 30%;
+  margin-right: 30%;
+  display: block;
+}
+
+/* current day and time */
+span.currentDay {
+  color: black;
+  font-size: medium;
+  font-family: "Montserrat", sans-serif;
+  margin: 18px;
+  text-transform: uppercase;
+}
+
+/* name of the city */
+h1.neonText {
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  color: #ff73ed;
+  text-shadow: 0 0 7px #fff, 0 0 20px #ff73ed;
+  padding: 10px;
+  text-transform: capitalize;
+  font-size: medium;
+  margin: 0 auto;
+}
+
+/* todays temperature */
+div.current-temp {
+  font-family: "Roboto", sans-serif;
+  text-align: right;
+  color: #ff73ed;
+  text-shadow: 0 0 7px #fff, 0 0 20px #ff73ed;
+  padding-top: 5px;
+  font-size: medium;
+  padding-right: 0px;
+}
+
+/* list for the current wind speed and weather description */
+
+div.windspeed {
+  list-style: none;
+  color: black;
+  font-size: medium;
+  font-family: "Montserrat", sans-serif;
+  padding-top: 10px;
+  padding-bottom: 0px;
+}
+
+div#wind1 {
+  text-align: right;
+  margin: auto 0px;
+}
+
+div#wind2wind-speed {
+  text-align: left;
+  margin: auto 0px;
+}
+
+div.description {
+  color: black;
+  font-size: medium;
+  font-family: "Montserrat", sans-serif;
+  padding-top: 5px;
+  padding-bottom: 10px;
+}
+
+div#description1 {
+  text-align: right;
+  margin: auto 0px;
+}
+
+div#description2 {
+  text-align: left;
+  margin: auto 0px;
+}
+
+/* degrees celcius and fahrenheit */
+#celcius {
+  font-family: "Roboto", sans-serif;
+  font-size: smaller;
+  text-align: left;
+  color: #ff73ed;
+  text-shadow: 0 0 7px #fff, 0 0 20px #ff73ed;
+  padding-top: 5px;
+  text-decoration: none;
+  padding-left: 0px;
+}
+
+.active {
+  font-family: "Roboto", sans-serif;
+  font-size: smaller;
+  color: #ff73ed;
+  text-shadow: 0 0 7px #fff, 0 0 20px #ff73ed;
+  cursor: default;
+  text-decoration: none;
+}
+
+.active:hover {
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-size: smaller;
+  color: #ff73ed;
+  text-shadow: 0 0 7px #fff, 0 0 20px #ff73ed;
+}
+
+/* weather icon*/
+img#currentTemp-icon {
+  display: block;
+  margin: auto;
+  width: 100px;
+  height: 100px;
+}
+
+img.futureTemp-icon {
+  display: block;
+  margin: auto;
+  width: 60px;
+  height: 60px;
+}
+
+/* tempurature for the next 5 following days */
+.following-temp {
+  font-family: "Roboto", sans-serif;
+  font-size: small;
+  text-align: right;
+  color: #eca462;
+  text-shadow: 0 0 7px #fff, 0 0 20px #eca462;
+  padding: 0px;
+  padding-bottom: 10px;
+}
+
+.following-temp-cel {
+  font-family: "Roboto", sans-serif;
+  font-size: small;
+  text-align: left;
+  color: #eca462;
+  text-shadow: 0 0 7px #fff, 0 0 20px #eca462;
+  padding: 0px;
+  padding-bottom: 10px;
+}
+
+/* days for the next 5 following days */
+p.following-days {
+  font-family: "Roboto", sans-serif;
+  font-size: small;
+  text-align: center;
+  color: #eca462;
+  text-shadow: 0 0 7px #fff, 0 0 20px #eca462;
+}
+
+div#fol-day {
+  margin: 5px;
+}
+
+/* search bar colours */
+.input-city {
+  background-color: #32323c;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  border: #1b1b20 solid transparent;
+  box-sizing: inherit;
+}
+
+/* search bar "Enter a city" */
+.input-city::placeholder {
+  color: black;
+  border: #1b1b20;
+}
+
+/* search bar location */
+.container1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+/* code for the buttons */
+button {
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+}
+
+button {
+  position: relative;
+  border: none;
+  font-size: 18px;
+  transition: color 0.5s, transform 0.2s, background-color 0.2s;
+  outline: none;
+  border-radius: 3px;
+  margin: 0 8px;
+  padding: 5px 8px;
+  border: 3px solid transparent;
+}
+button:active {
+  transform: translateY(3px);
+}
+button::after,
+button::before {
+  border-radius: 3px;
+}
+.material-bubble {
+  background-color: transparent;
+  color: black;
+  border: none;
+  overflow: hidden;
+  box-shadow: none;
+}
+.material-bubble:hover {
+  color: #e6e6e6;
+}
+.material-bubble::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 3px solid #32323c;
+  transition: opacity 0.3s, border 0.3s;
+}
+.material-bubble:hover::before {
+  opacity: 0;
+}
+.material-bubble::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 200px;
+  background-color: #494958;
+  border-color: transparent;
+  border-radius: 50%;
+  transform: translate(-10px, -70px) scale(0.1);
+  opacity: 0;
+  z-index: -1;
+  transition: transform 0.3s, opacity 0.3s, background-color 0.3s;
+}
+.material-bubble:hover::after {
+  opacity: 1;
+  transform-origin: 100px 100px;
+  transform: scale(1) translate(-10px, -70px);
+}
