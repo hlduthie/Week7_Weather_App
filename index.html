@@ -52,7 +52,7 @@
           
         </div>
         <div class="row windspeed">
-          <div class="col-6" id="wind1">Wind(m/sec):</div>
+          <div class="col-6" id="wind1">Wind(km/hr):</div>
           <div class="col-6" id="wind2"></div>
           
         </div>
@@ -64,67 +64,7 @@
       
 
       <!--Grid for the current city's temperature for the next 5 days-->
-      <div class="row" id="following-days">
-        <div class="col-2" id="fol-day">
-          <p class="following-days" id="day2"></p>
-          <!--Weather icon-->
-          <div class="col-12">
-            <img src="https://openweathermap.org/img/wn/10d@2x.png" class="futureTemp-icon" id="icon2"> </img>
-          </div>
-          <!--temperature-->
-          <div class="row">
-            <div class="col-6 following-temp neonText" id="day2-temp"></div>
-            <div class="col-6 following-temp-cel neonText" id="day2-celcius">°C</div>
-          </div>
-        </div>
-
-        <div class="col-2" id="fol-day">
-          <p class="following-days" id="day3"></p>
-          <div class="col-12">
-            <img src="https://openweathermap.org/img/wn/10d@2x.png" class="futureTemp-icon" id="icon3"> </img>
-          </div>
-          <div class="row">
-            <div class="col-6 following-temp neonText" id="day3-temp"></div>
-            <div class="col-6 following-temp-cel neonText" id="day3-degree">°C</div>
-          </div>
-        </div>
-
-        <div class="col-2" id="fol-day">
-          <p class="following-days" id="day4"></p>
-          <div class="col-12">
-            <img src="https://openweathermap.org/img/wn/10d@2x.png" class="futureTemp-icon" id="icon4"> </img>
-          </div>
-          <div class="row">
-            <div class="col-6 following-temp neonText" id="day4-temp"></div>
-            <div class="col-6 following-temp-cel neonText" id="day4-degree">°C</div>
-          </div>
-        </div>
-
-        <div class="col-2" id="fol-day">
-          <p class="following-days" id="day5"></p>
-          <div class="col-12">
-            <img src="https://openweathermap.org/img/wn/10d@2x.png" class="futureTemp-icon" id="icon5"> </img>
-          </div>
-          <div class="row">
-            <div class="col-6 following-temp neonText" id="day5-temp"></div>
-            <div class="col-6 following-temp-cel neonText" id="day5-degree">°C</div>
-          </div>
-        </div>
-
-        <div class="col-2" id="fol-day">
-          <p class="following-days" id="day6"></p>
-          <div class="col-12">
-            <img src="https://openweathermap.org/img/wn/10d@2x.png" class="futureTemp-icon" id="icon6"> </img>
-          </div>
-          <div class="row">
-            <div class="col-6 following-temp neonText" id="day6-temp"></div>
-            <div class="col-6 following-temp-cel neonText" id="day6-degree">°C</div>
-          </div>
-        </div>
-
-        
-      </div>
-    </div>
+      <div class="forecast" id="forecast"> </div>
 
     <!--Search bar-->
     <div class="container1">
@@ -134,6 +74,7 @@
       </form>
     </div>
 
+    <br >
     <p><a href="https://github.com/hlduthie/Week7_Weather_App">Open Source Code</a> by Hana Duthie</p>
 
     <script src="src/index.js"></script>

@@ -127,17 +127,19 @@ img.futureTemp-icon {
 .following-temp {
   font-family: "Roboto", sans-serif;
   font-size: small;
-  text-align: right;
+  text-align: center;
   color: #eca462;
   text-shadow: 0 0 7px #fff, 0 0 20px #eca462;
   padding: 0px;
-  padding-bottom: 10px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 19px;
 }
 
-.following-temp-cel {
+.forecast-day {
   font-family: "Roboto", sans-serif;
   font-size: small;
-  text-align: left;
+  text-align: center;
   color: #eca462;
   text-shadow: 0 0 7px #fff, 0 0 20px #eca462;
   padding: 0px;
@@ -145,16 +147,12 @@ img.futureTemp-icon {
 }
 
 /* days for the next 5 following days */
-p.following-days {
+div.forecast {
   font-family: "Roboto", sans-serif;
   font-size: small;
   text-align: center;
   color: #eca462;
   text-shadow: 0 0 7px #fff, 0 0 20px #eca462;
-}
-
-div#fol-day {
-  margin: 5px;
 }
 
 /* search bar colours */
@@ -198,6 +196,7 @@ button {
   padding: 5px 8px;
   border: 3px solid transparent;
 }
+
 button:active {
   transform: translateY(3px);
 }
